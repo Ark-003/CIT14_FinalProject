@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Form 2</title>
+  <style>
+    body {
+      background-color: transparent;
+      transition: background-color 1s ease;
+	  font-family: Helvetica;
+    }
+    .container {
+      width: 400px;
+      height: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    input[type="number"] {
+      margin-bottom: 10px;
+      width: 100%;
+      padding: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Student Form - Page 2</h1>
+    <form id="secondForm">
+      <label for="grade1">Grade 1:</label>
+      <input type="number" id="grade1" required>
+      <label for="grade2">Grade 2:</label>
+      <input type="number" id="grade2" required>
+      <label for="grade3">Grade 3:</label>
+      <input type="number" id="grade3" required>
+      <label for="grade4">Grade 4:</label>
+      <input type="number" id="grade4" required>
+      <label for="grade5">Grade 5:</label>
+      <input type="number" id="grade5" required>
+      <button id="submitButton">Submit</button>
+    </form>
+  </div>
+  
+  <script>
+    // Get form and button elements
+    const form = document.getElementById('secondForm');
+    const submitButton = document.getElementById('submitButton');
+    
+    // Add event listener to the Submit button
+    submitButton.addEventListener('click', function(event) {
+      event.preventDefault();
+      
+      // Get input values
+      const grade1 = parseInt(document.getElementById('grade1').value);
+      const grade2 = parseInt(document.getElementById('grade2').value);
+      const grade3 = parseInt(document.getElementById('grade3').value);
+      const grade4 = parseInt(document.getElementById('grade4').value);
+      const grade5 = parseInt(document.getElementById('grade5').value);
+      
+      // Validate inputs
+      if (isNaN(grade1) || isNaN(grade2) || isNaN(grade3) || isNaN(grade4) || isNaN(grade5)) {
+        alert('Input Required');
+      } else {
+        // Calculate average
+        const average = (grade1 + grade2 + grade3 + grade4 + grade5) / 5;
+        
+        // Display average and status
+        alert(`Average: ${average}`);
+        
+        // Change background color based on status
+        const body = document.querySelector('body');
+        if (average >= 90) {
+          body.style.backgroundColor = 'blue';
+          alert('Status: With Honors');
+        } else if (average >= 75 && average < 90) {
+          body.style.backgroundColor = 'green';
+          alert('Status: Pass');
+        } else {
+          body.style.backgroundColor = 'red';
+          alert('Status: Failed');
+        }
+      }
+    });
+  </script>
+</body>
+</html>

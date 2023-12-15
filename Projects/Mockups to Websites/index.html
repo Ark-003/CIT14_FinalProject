@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mockup Website</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-image: url("bg-index.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .container {
+        display: flex;
+        justify-content: space-between;
+      }
+      .Profile,
+      .Header {
+        padding: 10px;
+      }
+      h1 {
+        font-size: 70px;
+      }
+      p {
+        text-align: justify;
+        font-size: 24px;
+      }
+      .img {
+        display: flex;
+        min-width: 300px;
+        width: 600px;
+        height: auto;
+      }
+      .Links a {
+        font-weight: bold;
+        font-size: 20px;
+        transition: color 0.3s ease;
+      }
+      .Links a:hover {
+        color: rgb(50, 121, 96);
+      }
+    </style>
+    <link rel="stylesheet" href="../style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $("#backButton").click(function () {
+          $(this).addClass("animation slide-in-left");
+          setTimeout(function () {
+            $("#backButton").removeClass("animation slide-in-left");
+          }, 1000);
+          window.location.href = "../../About.html";
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="Profile">
+        <img src="gandako.jpg" class="img" />
+        <div class="Links">
+          <p>
+            <li><a href="A.html">Link A</a></li>
+          </p>
+          <p>
+            <li><a href="B.html">Link B</a></li>
+          </p>
+          <p>
+            <li><a href="index.html">Link External</a></li>
+          </p>
+        </div>
+      </div>
+      <div class="Header">
+        <h1>HEADER</h1>
+        <hr />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet
+          aliquam id diam. Eget magna fermentum iaculis eu non diam phasellus.
+          Enim tortor at auctor urna. Leo integer malesuada nunc vel risus
+          commodo viverra maecenas. Imperdiet dui accumsan sit amet nulla. Odio
+          pellentesque diam volutpat commodo. Dignissim cras tincidunt lobortis
+          feugiat. Nunc id cursus metus aliquam eleifend mi in. Id leo in vitae
+          turpis massa sed elementum tempus. Nunc sed velit dignissim sodales ut
+          eu sem integer vitae. Duis at tellus at urna condimentum. Quisque non
+          tellus orci ac auctor augue mauris augue. Tempus imperdiet nulla
+          malesuada pellentesque. Egestas tellus rutrum tellus pellentesque eu
+          tincidunt tortor aliquam. Et odio pellentesque diam volutpat.
+        </p>
+        <p>
+          Cursus mattis molestie a iaculis at erat pellentesque adipiscing.
+          Luctus accumsan tortor posuere ac ut consequat semper viverra nam.
+          Vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Sit
+          amet purus gravida quis blandit. Elementum nibh tellus molestie nunc.
+          Cursus vitae congue mauris rhoncus. Nec ullamcorper sit amet risus
+          nullam eget felis eget. Felis bibendum ut tristique et. Auctor augue
+          mauris augue neque. Ac orci phasellus egestas tellus rutrum tellus
+          pellentesque eu tincidunt. Morbi tincidunt ornare massa eget egestas
+          purus viverra accumsan. Amet tellus cras adipiscing enim. Amet dictum
+          sit amet justo. Feugiat in ante metus dictum at. Sapien et ligula
+          ullamcorper malesuada proin libero. Ac placerat vestibulum lectus
+          mauris ultrices eros in. Dictumst vestibulum rhoncus est pellentesque
+          elit ullamcorper dignissim cras. Adipiscing at in tellus integer
+          feugiat scelerisque varius morbi enim. Non pulvinar neque laoreet
+          suspendisse interdum. Amet mauris commodo quis imperdiet massa
+          tincidunt nunc pulvinar.
+        </p>
+      </div>
+    </div>
+    <button class="btn btn-primary" id="backButton">Back to Portfolio</button>
+  </body>
+</html>

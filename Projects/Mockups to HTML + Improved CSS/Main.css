@@ -1,0 +1,47 @@
+nav {
+  width: 100%;
+  list-style-type: none;
+  overflow: auto;
+  background-color: #5a5034;
+  font-family: Helvetica;
+}
+
+li {
+  float: left;
+  display: Inline-block;
+}
+
+li a {
+  float: left;
+  color: white;
+  font-size: 20px;
+  padding: 25px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #464232;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+.logo img {
+  background-color: #fff;
+  width: 70px;
+  position: absolute;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+#left-align {
+  float: right;
+}
+
+footer {
+  text-align: center;
+}

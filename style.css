@@ -1,0 +1,26 @@
+body {
+  background-color: beige;
+}
+
+.Profile,
+.Portfolio {
+  padding: 20px;
+}
+
+.Portfolio h2 {
+  padding-bottom: 50px;
+}
+
+.row {
+  margin: auto;
+  justify-content: center;
+}
+
+a.btn {
+  align-items: right;
+}
+
+.card {
+  margin: 0 0.5em;
+  min-height: 200px;
+}
